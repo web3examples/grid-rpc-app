@@ -129,6 +129,8 @@ class App extends Component {
       const gridPluginsWithRpc = gridPlugins.filter(p => p.sendRpc);
       plugins = [...gridPluginsWithRpc, ...plugins];
     }
+    else    
+        plugins = [ "geth",  "parity",  "clef" ];  // GP without grid
 
     this.setState({ plugins }, () => {
       this.handleChange('selectedPlugin')({
