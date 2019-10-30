@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "http://web3examples.com/grid-rpc-app/build /static/css/main.e168eaf6.chunk.css",
-    "main.js": "http://web3examples.com/grid-rpc-app/build /static/js/main.66138a62.chunk.js",
-    "main.js.map": "http://web3examples.com/grid-rpc-app/build /static/js/main.66138a62.chunk.js.map",
-    "runtime~main.js": "http://web3examples.com/grid-rpc-app/build /static/js/runtime~main.11f7e139.js",
-    "runtime~main.js.map": "http://web3examples.com/grid-rpc-app/build /static/js/runtime~main.11f7e139.js.map",
-    "static/js/2.9838ceeb.chunk.js": "http://web3examples.com/grid-rpc-app/build /static/js/2.9838ceeb.chunk.js",
-    "static/js/2.9838ceeb.chunk.js.map": "http://web3examples.com/grid-rpc-app/build /static/js/2.9838ceeb.chunk.js.map",
-    "index.html": "http://web3examples.com/grid-rpc-app/build /index.html",
-    "precache-manifest.059149b77933ac0e962c32ba1260a95c.js": "http://web3examples.com/grid-rpc-app/build /precache-manifest.059149b77933ac0e962c32ba1260a95c.js",
-    "service-worker.js": "http://web3examples.com/grid-rpc-app/build /service-worker.js",
-    "static/css/main.e168eaf6.chunk.css.map": "http://web3examples.com/grid-rpc-app/build /static/css/main.e168eaf6.chunk.css.map"
+    "main.css": "http://web3examples.com/grid-rpc-app/build/static/css/main.e168eaf6.chunk.css",
+    "main.js": "http://web3examples.com/grid-rpc-app/build/static/js/main.19407dac.chunk.js",
+    "main.js.map": "http://web3examples.com/grid-rpc-app/build/static/js/main.19407dac.chunk.js.map",
+    "runtime~main.js": "http://web3examples.com/grid-rpc-app/build/static/js/runtime~main.a296e42f.js",
+    "runtime~main.js.map": "http://web3examples.com/grid-rpc-app/build/static/js/runtime~main.a296e42f.js.map",
+    "static/js/2.9838ceeb.chunk.js": "http://web3examples.com/grid-rpc-app/build/static/js/2.9838ceeb.chunk.js",
+    "static/js/2.9838ceeb.chunk.js.map": "http://web3examples.com/grid-rpc-app/build/static/js/2.9838ceeb.chunk.js.map",
+    "index.html": "http://web3examples.com/grid-rpc-app/build/index.html",
+    "precache-manifest.103d446ecf432e2c6c129e4899a1972b.js": "http://web3examples.com/grid-rpc-app/build/precache-manifest.103d446ecf432e2c6c129e4899a1972b.js",
+    "service-worker.js": "http://web3examples.com/grid-rpc-app/build/service-worker.js",
+    "static/css/main.e168eaf6.chunk.css.map": "http://web3examples.com/grid-rpc-app/build/static/css/main.e168eaf6.chunk.css.map"
   }
 }
