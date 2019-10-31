@@ -100,12 +100,15 @@ class App extends Component {
     super(props);
 
     this.state = {
-      plugins: [{ name: 'custom', displayName: 'Custom' }],
+      plugins: [ //{ name: 'custom', displayName: 'Custom' },
+                { name: 'geth',   displayName: 'geth' },
+               // { name: 'parity', displayName: 'parity' }
+               ],
       pluginState: null,
-      selectedPlugin: 'custom',
-      http: 'http',
-      host: 'localhost',
-      port: '8545',
+      selectedPlugin: 'geth',
+      http: 'https',
+      host: 'mainnet.infura.io',
+      port: '443',
       method: '',
       params: '',
       result: null,
@@ -123,14 +126,12 @@ class App extends Component {
   };
 
   getPlugins = async () => {
-    let plugins = [{ name: 'custom', displayName: 'Custom' }];
+    let plugins = this.state.plugins;
     if (window.grid) {
       const gridPlugins = window.grid.getAllPlugins();
       const gridPluginsWithRpc = gridPlugins.filter(p => p.sendRpc);
       plugins = [...gridPluginsWithRpc, ...plugins];
     }
-    else    
-        plugins = [ "geth",  "parity",  "clef" ];  // GP without grid
 
     this.setState({ plugins }, () => {
       this.handleChange('selectedPlugin')({
@@ -155,12 +156,12 @@ class App extends Component {
       if (field === 'selectedPlugin') {
         let pluginState = null;
         if (value !== 'custom') {
-          pluginState = this.selectedPluginRef().getState();
-          this.setState({ pluginState });
-          this.selectedPluginRef().on('newState', this.updatePluginState);
-          if (oldSelectedPluginRef.off) {
-            oldSelectedPluginRef.off('newState', this.updatePluginState);
-          }
+//          pluginState = this.selectedPluginRef().getState();
+//          this.setState({ pluginState });
+//          this.selectedPluginRef().on('newState', this.updatePluginState);
+//          if (oldSelectedPluginRef.off) {
+//            oldSelectedPluginRef.off('newState', this.updatePluginState);
+//          }
         }
       }
     });
@@ -170,8 +171,10 @@ class App extends Component {
     this.setState({ method: '', params: '', error: null, result: null });
   };
 
+
   send = async () => {
     this.setState({ result: 'Pending...' });
+    console.log('Pending');
     const { selectedPlugin, method, pluginState } = this.state;
     let { params } = this.state;
     if (!params || params === '') {
@@ -184,15 +187,15 @@ class App extends Component {
       }
     }
     if (selectedPlugin !== 'custom') {
-      if (pluginState !== 'CONNECTED') {
-        this.setState({
-          error: 'Plugin not connected, please restart plugin and try again.'
-        });
-        return;
-      }
-      const result = await this.selectedPluginRef().sendRpc(method, params);
-      this.setState({ result });
-    } else {
+//      if (pluginState !== 'CONNECTED') {
+//        this.setState({
+//          error: 'Plugin not connected, please restart plugin and try again.'
+//        });
+//        return;
+//      }
+//      const result = await this.selectedPluginRef().sendRpc(method, params);
+//      this.setState({ result });
+//    } else {
       const { http, host, port } = this.state;
       let message = {
         id: nextId++,
@@ -204,6 +207,9 @@ class App extends Component {
         message = JSON.stringify(message);
         const ssl = httpTypes.find(h => h.value === http).label;
         const server = `${ssl}${host}:${port}`;
+        
+console.log(`send ${message} to ${server}`);        
+        
         const rawResponse = await fetch(server, {
           method: 'POST',
           headers: {
@@ -314,7 +320,7 @@ class App extends Component {
             ))}
           </TextField>
         </div>
-        {selectedPlugin !== 'custom' && (
+        {selectedPlugin === 'off' && (
           <div className={classes.pluginState}>
             State: <strong>{pluginState}</strong>
           </div>
@@ -325,7 +331,9 @@ class App extends Component {
             <strong>RPC External API</strong> is set to <strong>IPC</strong>.
           </div>
         )}
-        {selectedPlugin === 'custom' && (
+        {
+            // selectedPlugin === 'custom' && 
+           (
           <div className="server section-form section-outline">
             <div className="section-title">Server</div>
             <div className="section-body">

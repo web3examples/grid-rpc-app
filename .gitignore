@@ -9,7 +9,7 @@
 /coverage
 
 # production
-go.cmd
+go*.cmd
 
 # misc
 .DS_Store

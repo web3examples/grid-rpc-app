@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "http://web3examples.com/grid-rpc-app/build/static/css/main.e168eaf6.chunk.css",
-    "main.js": "http://web3examples.com/grid-rpc-app/build/static/js/main.c5bf05ed.chunk.js",
-    "main.js.map": "http://web3examples.com/grid-rpc-app/build/static/js/main.c5bf05ed.chunk.js.map",
+    "main.js": "http://web3examples.com/grid-rpc-app/build/static/js/main.be6ecf28.chunk.js",
+    "main.js.map": "http://web3examples.com/grid-rpc-app/build/static/js/main.be6ecf28.chunk.js.map",
     "runtime~main.js": "http://web3examples.com/grid-rpc-app/build/static/js/runtime~main.a296e42f.js",
     "runtime~main.js.map": "http://web3examples.com/grid-rpc-app/build/static/js/runtime~main.a296e42f.js.map",
     "static/js/2.9838ceeb.chunk.js": "http://web3examples.com/grid-rpc-app/build/static/js/2.9838ceeb.chunk.js",
     "static/js/2.9838ceeb.chunk.js.map": "http://web3examples.com/grid-rpc-app/build/static/js/2.9838ceeb.chunk.js.map",
     "index.html": "http://web3examples.com/grid-rpc-app/build/index.html",
-    "precache-manifest.b19796f1ec9e4832704482f0a073a9d5.js": "http://web3examples.com/grid-rpc-app/build/precache-manifest.b19796f1ec9e4832704482f0a073a9d5.js",
+    "precache-manifest.1b2a0bfb6834789a71f0501f0efb7ec5.js": "http://web3examples.com/grid-rpc-app/build/precache-manifest.1b2a0bfb6834789a71f0501f0efb7ec5.js",
     "service-worker.js": "http://web3examples.com/grid-rpc-app/build/service-worker.js",
     "static/css/main.e168eaf6.chunk.css.map": "http://web3examples.com/grid-rpc-app/build/static/css/main.e168eaf6.chunk.css.map"
   }
