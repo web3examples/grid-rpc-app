@@ -1,4 +1,4 @@
-[Grid RPC Tester](build)
+[Grid RPC Tester](https://web3examples.com/grid-rpc-app/build)
 * Based on [Ethereum Grid](https://grid.ethereum.org])
 
 
