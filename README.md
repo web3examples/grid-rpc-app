@@ -1,5 +1,5 @@
 [Grid RPC Tester](build)
-Based on https://grid.ethereum.org/
+* Based on [Ethereum Grid](https://grid.ethereum.org])
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
