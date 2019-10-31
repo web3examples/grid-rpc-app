@@ -145,26 +145,13 @@ class App extends Component {
   };
 
   handleChange = field => async event => {
-    const oldSelectedPluginRef = this.selectedPluginRef();
+    //const oldSelectedPluginRef = this.selectedPluginRef();
     // react-select events: { label: 'example', value: 'example' }
     let value = event.value;
     if (event.target && event.target.value) {
       value = event.target.value;
     }
-
-    this.setState({ [field]: value, error: null }, () => {
-      if (field === 'selectedPlugin') {
-        let pluginState = null;
-        if (value !== 'custom') {
-//          pluginState = this.selectedPluginRef().getState();
-//          this.setState({ pluginState });
-//          this.selectedPluginRef().on('newState', this.updatePluginState);
-//          if (oldSelectedPluginRef.off) {
-//            oldSelectedPluginRef.off('newState', this.updatePluginState);
-//          }
-        }
-      }
-    });
+    this.setState({ [field]: value, error: null }, () => {});
   };
 
   reset = () => {
@@ -186,16 +173,7 @@ class App extends Component {
         this.setState({ error: `Unable to parse params: ${error}` });
       }
     }
-    if (selectedPlugin !== 'custom') {
-//      if (pluginState !== 'CONNECTED') {
-//        this.setState({
-//          error: 'Plugin not connected, please restart plugin and try again.'
-//        });
-//        return;
-//      }
-//      const result = await this.selectedPluginRef().sendRpc(method, params);
-//      this.setState({ result });
-//    } else {
+    {
       const { http, host, port } = this.state;
       let message = {
         id: nextId++,
@@ -208,7 +186,7 @@ class App extends Component {
         const ssl = httpTypes.find(h => h.value === http).label;
         const server = `${ssl}${host}:${port}`;
         
-console.log(`send ${message} to ${server}`);        
+        console.log(`send ${message} to ${server}`);        
         
         const rawResponse = await fetch(server, {
           method: 'POST',
@@ -305,34 +283,7 @@ console.log(`send ${message} to ${server}`);
 
     return (
       <div className="form">
-        <div className="plugin">
-          <TextField
-            label="Plugin"
-            value={selectedPlugin}
-            select
-            className={classes.plugin}
-            onChange={this.handleChange('selectedPlugin')}
-          >
-            {plugins.map(plugin => (
-              <MenuItem key={plugin.name} value={plugin.name}>
-                {plugin.displayName}
-              </MenuItem>
-            ))}
-          </TextField>
-        </div>
-        {selectedPlugin === 'off' && (
-          <div className={classes.pluginState}>
-            State: <strong>{pluginState}</strong>
-          </div>
-        )}
-        {selectedPlugin === 'clef' && (
-          <div style={{ marginBottom: 20 }}>
-            Please ensure in your Clef settings that{' '}
-            <strong>RPC External API</strong> is set to <strong>IPC</strong>.
-          </div>
-        )}
-        {
-            // selectedPlugin === 'custom' && 
+         {
            (
           <div className="server section-form section-outline">
             <div className="section-title">Server</div>
@@ -397,7 +348,7 @@ console.log(`send ${message} to ${server}`);
                           shrink: true
                         }
                       }}
-                      placeholder="Method"
+                      placeholder="Method - Click here to select a method"
                       options={methods}
                       components={components}
                       value={method && { label: method, value: method }}
