@@ -107,9 +107,9 @@ class App extends Component {
       pluginState: null,
       selectedPlugin: 'geth',
       http: 'https',
-      host: 'https://cloudflare-eth.com',
+      host: 'cloudflare-eth.com',
       port: '443',
-      method: '',
+      method: 'web3_clientVersion',
       params: '',
       result: null,
       error: null

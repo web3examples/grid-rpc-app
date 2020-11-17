@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a68a5ea293b6b7849ce38ee2ec02edeb",
+    "revision": "0bf1d6da6d628717aca8d4ef06b6dfa9",
     "url": "https://web3examples.com/grid-rpc-app/build/index.html"
   },
   {
-    "revision": "db0e69dee52a8a07cd9e",
+    "revision": "a6d551af34e4bb0607ba",
     "url": "https://web3examples.com/grid-rpc-app/build/static/css/main.e168eaf6.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://web3examples.com/grid-rpc-app/build/static/js/2.9838ceeb.chunk.js"
   },
   {
-    "revision": "db0e69dee52a8a07cd9e",
-    "url": "https://web3examples.com/grid-rpc-app/build/static/js/main.d5242bed.chunk.js"
+    "revision": "a6d551af34e4bb0607ba",
+    "url": "https://web3examples.com/grid-rpc-app/build/static/js/main.70821948.chunk.js"
   },
   {
     "revision": "b18c9c7bda4f4d6619cc",
