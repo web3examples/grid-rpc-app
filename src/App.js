@@ -107,7 +107,7 @@ class App extends Component {
       pluginState: null,
       selectedPlugin: 'geth',
       http: 'https',
-      host: 'mainnet.infura.io',
+      host: 'https://cloudflare-eth.com',
       port: '443',
       method: '',
       params: '',
